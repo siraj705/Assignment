@@ -1,7 +1,7 @@
 import 'dart:io';
 
-var mainSelections = "";
-var childSelections = "";
+var mainselected = "";
+var smallselected = "";
 var restart = false;
 
 void main() {
@@ -25,14 +25,14 @@ showOptions(Map optionsMap) {
     print("$i: ${optionsMap["$i"]}");
   }
 
-  mainSelections = stdin.readLineSync()!;
-  if (mainSelections == "1") {
+  mainselected = stdin.readLineSync()!;
+  if (mainselected == "1") {
     showLengthOptions();
-  } else if (mainSelections == "2") {
+  } else if (mainselected == "2") {
     showTempOptions();
-  } else if (mainSelections == "3") {
-  } else if (mainSelections == "4") {
-  } else if (mainSelections == "5") {
+  } else if (mainselected == "3") {
+  } else if (mainselected == "4") {
+  } else if (mainselected == "5") {
   } else {
     print("Incorrect Input, Please make selection from above options only");
     showOptions(optionsMap);
@@ -53,18 +53,18 @@ showLengthOptions() {
   for (var i = 1; i <= myOptions.length; i++) {
     print("$i: ${myOptions["$i"]}");
   }
-  childSelections = stdin.readLineSync()!;
-  if (childSelections == "1") {
+  smallselected = stdin.readLineSync()!;
+  if (smallselected == "1") {
     meterToKilometers();
-  } else if (childSelections == "2") {
+  } else if (smallselected == "2") {
     kmToMeters();
-  } else if (childSelections == "3") {
+  } else if (smallselected == "3") {
     feetToInches();
-  } else if (childSelections == "4") {
+  } else if (smallselected == "4") {
     inchesToFeet();
-  } else if (childSelections == "5") {
+  } else if (smallselected == "5") {
     cmToMeters();
-  } else if (childSelections == "6") {
+  } else if (smallselected == "6") {
     metersToCm();
   } else {
     print("Incorrect Input, Please make selection from above options only");
@@ -83,9 +83,9 @@ showTempOptions() {
   for (var i = 1; i <= myOptions.length; i++) {
     print("$i: ${myOptions["$i"]}");
   }
-  childSelections = stdin.readLineSync()!;
-  if (childSelections == "1") {
-  } else if (childSelections == "2") {
+  smallselected = stdin.readLineSync()!;
+  if (smallselected == "1") {
+  } else if (smallselected == "2") {
   } else {
     print("Incorrect Input, Please make selection from above options only");
     showTempOptions();
